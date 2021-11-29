@@ -19,7 +19,6 @@ steps:
   inputs:
     packageType: sdk
     version: 5.x
-    installationPath: $(Agent.ToolsDirectory)/dotnet
 - task: Npm@1
   displayName: Run npm install
   inputs:
@@ -36,8 +35,6 @@ steps:
   inputs:
     command: restore
     projects: '**/*.csproj'
-    feedsToUse: 'config'
-    nugetConfigPath: 'nuget.config'
 - task: DotNetCoreCLI@2
   displayName: Build the project - Release
   inputs:
