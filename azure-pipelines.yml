@@ -18,7 +18,7 @@ steps:
   displayName: Use .NET SDK 5.x
   inputs:
     packageType: sdk
-    version: 5.x
+    version: 5.0.x
 - task: Npm@1
   displayName: Run npm install
   inputs:
